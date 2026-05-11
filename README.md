@@ -39,7 +39,7 @@ Ten new features were added on top of the P1 columns: polynomial temperature (`t
 Ridge was selected based on the highest cross-validation R² (0.906) across TimeSeriesSplit folds — the most reliable generalisation metric for a time-series problem. Polynomial degree 2 achieved the lowest test RMSE (1,508 MWh) but its negative CV R² (−0.55) indicates instability in smaller training folds. Ridge's test RMSE of 1,943 MWh represents a **42% improvement** over the lag-only baseline.
 
 **Lasso Feature Selection**
-Lasso automatically zeroed 6 of 24 features: `lag_diff`, `temp_avg`, `hum_avg`, `season_Spring`, `season_Winter`, and `temp_bin_warm` — confirming that these are redundant once the lag, quadratic temperature, and cyclical encoding features are present.
+Lasso automatically zeroed 6 of 24 features: `lag_diff`, `temp_avg`, `hum_avg`, `season_Spring`, `season_Winter`, and `temp_bin_warm` - confirming that these are redundant once the lag, quadratic temperature, and cyclical encoding features are present.
 
 **Limitations & Next Steps (P3)**
 Lag features (`lag_1d`, `lag_7d`) dominate all models, confirming that Turkey's electricity demand follows a strong 24-hour and 7-day cycle. Linear models achieve ~5% MAPE, close to but not yet at the EPİAŞ operational target of ±2–3%. P3 will explore non-linear models (gradient boosting, neural networks) using the same 80/20 chronological split and Ridge's 1,943 MWh RMSE as the benchmark.
