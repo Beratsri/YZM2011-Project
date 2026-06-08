@@ -23,10 +23,10 @@ Turkey's electricity producers must submit hourly generation bids to the EPİAŞ
 ## Key Findings
 
 ### P1 - Exploratory Data Analysis
-- `lag_1d` (same hour yesterday) has r ≈ 0.97 with consumption - the strongest single predictor
-- `lag_7d` (same hour last week) has r ≈ 0.95 - captures the weekly demand pattern
+- `lag_7d` (same hour last week) has r ≈ 0.88 with consumption - the strongest single predictor
+- `lag_1d` (same hour yesterday) has r ≈ 0.87 - captures the daily demand pattern
 - Temperature has a **U-shaped** relationship with consumption (minimum demand at ~15–18°C)
-- Weekends reduce demand by ~10%, bayram holidays by ~15%
+- Weekends reduce demand by ~9.4%, public holidays by ~18%, bayram by ~27%
 - Strong bimodal seasonality: peaks in January–February (heating) and July–August (cooling)
 
 ### P2 - Regression Modeling
